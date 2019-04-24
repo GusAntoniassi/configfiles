@@ -1,0 +1,5 @@
+alias npr='npm run'
+alias npi='npm install'
+alias npidev='npm install --save-dev'
+alias nps='npm start'
+alias npserve='npm run serve'
