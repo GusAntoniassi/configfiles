@@ -1,2 +1,4 @@
 PROMPT="${ret_status}%{$fg_bold[green]%}%n@%m%{$reset_color%}% :%{$fg_bold[blue]%}%~%{$reset_color%} $(git_prompt_info)"
+# Fix "zsh: no matches found: *" issue
+setopt +o nomatch
 
