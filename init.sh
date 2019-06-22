@@ -1,7 +1,7 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
-DIR=$(dirname "$0")
+DIR=$(realpath $(dirname "$0"))
 
 for f in "$DIR"/*.rc; do
-        source $f;
+    source "$f";
 done
