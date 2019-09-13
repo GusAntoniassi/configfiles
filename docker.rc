@@ -1,1 +1,15 @@
-alias dcu='docker-compose up -d'
+# Docker
+alias drn='docker run'
+alias dex='docker exec -it'
+alias dps='docker ps'
+alias drm='docker rm'
+alias dk='docker kill'
+alias dcp='docker cp'
+alias dbld='docker build'
+alias dpsh='docker push'
+
+# Docker Compose
+alias dc='docker-compose'
+alias dcu='docker-compose up'
+alias dce='docker-compose exec'
+alias dcd='docker-compose down'
