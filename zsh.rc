@@ -1,5 +1,5 @@
 if [ "$ZSH_THEME" = "clean" ]; then
-  PROMPT='%{$fg[$NCOLOR]%}%B%n@%m%b%{$reset_color%}:%{$fg[blue]%}%B%c/%b%{$reset_color%} $(git_prompt_info)%(!.#.$) '
+  PROMPT='%{$fg[$NCOLOR]%}%B%n@%m%b%{$reset_color%}:%{$fg[blue]%}%B%~/%b%{$reset_color%} $(git_prompt_info)%(!.#.$) '
   ZSH_THEME_GIT_PROMPT_DIRTY=""
 else
   PROMPT="${ret_status}%{$fg_bold[green]%}%n@%m%{$reset_color%}% :%{$fg_bold[blue]%}%~%{$reset_color%} "
