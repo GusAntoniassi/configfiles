@@ -1,2 +1,3 @@
 # Alias 'sudo !!' as 'please'
 alias please='sudo $(fc -ln -1)'
+alias nc='nc -v'
