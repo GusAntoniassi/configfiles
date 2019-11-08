@@ -1,0 +1,5 @@
+alias tp='terraform plan'
+alias tap='terraform apply'
+alias tds='terraform destroy'
+alias tout='terraform output'
+alias tini='terraform init'
