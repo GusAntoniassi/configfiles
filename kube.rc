@@ -1,0 +1,18 @@
+# kubectl
+alias kct='kubectl'
+alias kctg='kubectl get'
+alias kctd='kubectl describe'
+alias kctdpod='kubectl describe pod'
+alias kctddep='kubectl describe deployment'
+alias kctdsa='kubectl describe serviceaccount'
+alias kcte='kubectl exec -it'
+alias kcta='kubectl apply -f'
+
+function kctn() { kubectl config set-context --current --namespace="$@" }
+alias kctyml='kubectl describe -o yaml'
+
+alias kctedit='kubectl edit'
+alias kctlog='kubectl logs'
+alias kctlogf='kubectl logs -f'
+alias kctpod='kubectl get pods'
+alias kctns='kubectl get namespaces'

@@ -1,2 +1,4 @@
 # Alias 'sudo !!' as 'please'
 alias please='sudo $(fc -ln -1)'
+alias vscode='code .'
+alias vscodex='code . && exit'
