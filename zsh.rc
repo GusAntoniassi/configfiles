@@ -5,8 +5,14 @@ elif [ "$ZSH_THEME" = "robbyrussel" ]; then
   PROMPT="${ret_status}%{$fg_bold[green]%}%n@%m%{$reset_color%}% :%{$fg_bold[blue]%}%~%{$reset_color%} "
 fi
 
+func kube-shell() {
+    if command -v kube_ps1 >/dev/null 2>&1; then
+        export PROMPT=$(echo $PROMPT | perl -pe 's/%(?!.*%)/\$(kube_ps1) \%/')
+    fi
+}
+
 # Fix "zsh: no matches found: *" issue
-#setopt +o nomatch
+setopt +o nomatch
 
 
 
