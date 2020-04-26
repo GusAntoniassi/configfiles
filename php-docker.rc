@@ -1,0 +1,24 @@
+__run_php_docker() {
+    ports=""
+    port_binding_command=""
+
+    # Allow running PHP in webserver mode, by creating the necessary port bindings.
+    # eg: php -S 0.0.0.0:8080
+    if [ "$2" == "-S" ]; then
+        ports="$ports $(echo $3 | sed -r 's/.*?:([0-9]+)$/\1/')"
+    fi
+
+    if [ ! -z "$ports" ]; then
+        for port in $ports; do
+            port=$(echo $port | tr -d '[:space:]')
+            port_binding_command="$port_binding_command -p=$port:$port"
+        done
+        
+        port_binding_command=$(echo $port_binding_command | tr -d '[:space:]')
+    fi
+set -x
+    docker run -it --workdir=/app -v $PWD:/app $port_binding_command --rm "php:$1" /usr/local/bin/php "${@:2}"
+}
+
+alias php="__run_php_docker 7.4-cli"
+alias php7.3="__run_php_docker 7.3-cli"
