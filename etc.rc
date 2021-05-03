@@ -4,3 +4,10 @@ alias vscode='code .'
 alias vscodex='code . && exit'
 alias nc='nc -v'
 alias duchs='du -chs *'
+
+alias apty='sudo apt install -y'
+
+function qrc() {
+   echo "import pyqrcode\nprint(pyqrcode.create('$1').terminal(quiet_zone=1))" | python3
+}
+

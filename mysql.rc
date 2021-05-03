@@ -1,0 +1,5 @@
+alias mysql57='docker run -it --rm mysql:5.7 mysql'
+alias mysql56='docker run -it --rm mysql:5.6 mysql'
+alias mysql8='docker run -it --rm mysql:8 mysql'
+
+alias mysql='mysql57'

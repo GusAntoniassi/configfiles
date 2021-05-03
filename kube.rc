@@ -13,3 +13,5 @@ alias kclogf='kubectl logs -f'
 
 alias kcgctx='kubectl config get-contexts'
 alias kcctx='kubectl config use-context'
+
+function kcalogapp { echo kubectl logs -f --selector app.kubernetes.io/name="$1" -n "$1" -c "$1" }
