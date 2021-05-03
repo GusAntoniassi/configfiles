@@ -1,0 +1,4 @@
+if [ -f "$HOME/.ssh/keys/id_rsa" ]; then
+  ssh-add "$HOME/.ssh/keys/id_rsa"
+fi
+
